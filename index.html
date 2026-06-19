@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEN TEN | Whitening Body Lotion</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#000;
+            color:white;
+            font-family:Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            background:#000;
+        }
+
+        .navbar-brand{
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+            position:relative;
+            transition:.3s;
+        }
+
+        .nav-link:hover{
+            color:#ccc !important;
+        }
+
+        .nav-link::after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:2px;
+            left:0;
+            bottom:-3px;
+            background:white;
+            transition:.3s;
+        }
+
+        .nav-link:hover::after{
+            width:100%;
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:5rem;
+            font-weight:bold;
+            animation:fadeDown 1.2s ease;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin:auto;
+        }
+
+        .btn-enter{
+            background:white;
+            color:black;
+            padding:12px 35px;
+            border:none;
+            transition:.3s;
+        }
+
+        .btn-enter:hover{
+            transform:scale(1.05);
+            box-shadow:0 0 20px white;
+        }
+
+        /* SECTION */
+
+        .section-title{
+            margin-bottom:50px;
+            font-weight:bold;
+        }
+
+        .card-custom{
+            background:#111;
+            border:none;
+            color:white;
+            transition:.4s;
+        }
+
+        .card-custom:hover{
+            transform:translateY(-10px);
+        }
+
+        .after-card{
+            animation:glow 2s infinite;
+        }
+
+        @keyframes glow{
+            0%{
+                box-shadow:0 0 10px white;
+            }
+
+            50%{
+                box-shadow:0 0 30px white;
+            }
+
+            100%{
+                box-shadow:0 0 10px white;
+            }
+        }
+
+        @keyframes fadeDown{
+            from{
+                opacity:0;
+                transform:translateY(-30px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        .arrow{
+            font-size:5rem;
+            font-weight:bold;
+        }
+
+        /* Mobile */
+        @media (max-width:768px){
+
+            .arrow{
+                transform: rotate(90deg);
+                display:inline-block;
+            }
+
+        }
+
+        .hero-section{
+            background:url("Brand Pictures/HD page.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+        @media (max-width: 768px){
+
+            .hero-section{
+                background-image: url("Brand Pictures/mobile screen.jpg");
+                background-position: center;
+            }
+
+        }
+
+        .motivation-section{
+            background:url("Brand Pictures/Motivation3.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+        }
+
+        @media (max-width: 768px){
+
+            .motivation-section{
+            background:url("Brand Pictures/mobile motivation.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            align-items: center;
+
+            min-height: 100vh;}
+        }
+
+        .footer-luxury{
+            background:#000;
+            padding:70px 20px 40px;
+            margin-top:80px;
+            border-top:1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo{
+            font-size:3rem;
+            font-weight:700;
+            letter-spacing:8px;
+            margin-bottom:15px;
+        }
+
+        .footer-slogan{
+            color:#aaa;
+            font-size:1rem;
+            letter-spacing:2px;
+            margin-bottom:35px;
+        }
+
+        .footer-links{
+            margin-bottom:35px;
+        }
+
+        .footer-links a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-size:.95rem;
+            letter-spacing:2px;
+            transition:.3s;
+            position:relative;
+        }
+
+        .footer-links a:hover{
+            color:#ccc;
+        }
+
+        .footer-links a::after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:2px;
+            left:0;
+            bottom:-5px;
+            background:white;
+            transition:.3s;
+        }
+
+        .footer-links a:hover::after{
+            width:100%;
+        }
+
+        .footer-divider{
+            width:120px;
+            height:1px;
+            background:rgba(255,255,255,.3);
+            margin:0 auto 30px;
+        }
+
+        .footer-copy{
+            color:#777;
+            font-size:.9rem;
+        }
+
+        @media (max-width:768px){
+
+            .footer-logo{
+                font-size:2rem;
+                letter-spacing:4px;
+            }
+
+            .footer-links a{
+                display:block;
+                margin:12px 0;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            TEN TEN Official
+        </a>
+
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="price.html">
+                        Price
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero-section vh-100 d-flex align-items-center justify-content-center text-center text-white">
+
+    <div class="container">
+
+        <h1><b>TEN TEN</b></h1>
+
+        <h3 class="mb-4">
+            Whitening Body Lotion
+        </h3>
+
+        <p class="lead mb-4">
+            Glow Naturally. Feel Confident.
+            Experience healthy and radiant skin
+            <br>with our premium body care products.
+        </p>
+
+        <a href="home.html"
+           class="btn btn-enter btn-lg">
+            Learn More
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CEO TRANSFORMATION -->
+
+<section class="container py-5">
+    
+    <h2 class="text-center section-title">
+        Reality feedback from CEO
+    </h2>
+
+    <div class="row align-items-center">
+
+        <div class="col-md-5 mb-4">
+
+            <div class="card card-custom after-card">
+
+                <img src="Brand Pictures/before.jpg"
+                     class="card-img-top"
+                     alt="CEO Before">
+
+                <div class="card-body text-center">
+
+                    <h4>Before</h4>
+                    <p>Before Using TEN TEN Products</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-2 text-center">
+
+            <div class="arrow">
+                →
+            </div>
+
+        </div>
+
+        <div class="col-md-5 mb-4">
+
+            <div class="card card-custom after-card">
+
+                <img src="Brand Pictures/glow up.jpg"
+                     class="card-img-top"
+                     alt="CEO After">
+
+                <div class="card-body text-center">
+
+                    <h4>After</h4>
+                    <p>Healthy, Bright and Confident</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MOTIVATION -->
+
+<section class="motivation-section py-5 align-items-center justify-content-center text-center text-white">
+
+    <h2 class="section-title m-3">
+        Why you should try our products 
+    </h2>
+
+    <p class="lead">
+        “Confidence begins when you take care of yourself.”
+    </p>
+
+    <p class="mb-5">
+        TEN TEN believes everyone deserves healthy,
+        beautiful skin. Our products are designed
+        to help you glow naturally and feel your best
+        every day.
+    </p>
+
+    <p class="mt-5 pt-5">
+        Reveal your natural glow with every application.
+        <br>
+        Soft, smooth, and brighter-looking skin begins with daily care.
+        <br>
+        Nourish your skin and let your confidence shine.
+        <br>
+        Deep hydration for skin that feels silky and looks radiant.
+        <br>
+        Experience the beauty of healthy, luminous skin.
+        <br>
+        Pamper your skin with the care it deserves.
+        <br>
+        Smooth skin. Lasting moisture. Everyday confidence.
+        <br>
+        A simple step toward softer, brighter-looking skin.
+        <br>
+        Hydrate deeply and glow naturally.
+        <br>
+        Beautiful skin starts with consistent care.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer-luxury text-center">
+
+    <div class="container">
+
+        <h1 class="footer-logo">
+            TEN TEN
+        </h1>
+
+        <p class="footer-slogan">
+            Premium Whitening Body Lotion
+        </p>
+
+        <div class="footer-links">
+
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="price.html">PRICE</a>
+            <a href="contact.html">CONTACT</a>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-slogan">
+            Glow Naturally. Feel Confident.
+        </p>
+
+        <p class="footer-copy">
+            &copy; 2026 TEN TEN Official | Developed by KHUN SOTHOMMO
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

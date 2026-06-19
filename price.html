@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price | TEN TEN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background:#000;
+            color:white;
+            font-family:Arial, sans-serif;
+        }
+
+        .navbar{
+            background:#111;
+        }
+
+        .nav-link{
+            color:white !important;
+            margin-left:15px;
+            position:relative;
+            transition:.3s;
+        }
+
+        .nav-link:hover{
+            color:#ccc !important;
+        }
+
+        .nav-link::after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:2px;
+            left:0;
+            bottom:-3px;
+            background:white;
+            transition:.3s;
+        }
+
+        .nav-link:hover::after{
+            width:100%;
+        }
+
+        .page-header{
+            background:#111;
+            padding:120px 0 80px;
+            padding-top: 180px;
+            text-align:center 30%;
+        }
+
+        .product-card{
+            background:#111;
+            border:none;
+            color:white;
+            transition:.4s;
+            overflow:hidden;
+            position:relative;
+        }
+
+        .product-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 0 25px rgba(255,255,255,0.2);
+        }
+
+        .product-card img{
+            height:300px;
+            object-fit:cover;
+        }
+
+        .price{
+            font-size:2rem;
+            font-weight:bold;
+            color:#fff;
+        }
+
+        .btn-custom{
+            background:white;
+            color:black;
+            border:none;
+            transition:.3s;
+        }
+
+        .btn-custom:hover{
+            transform:scale(1.05);
+            box-shadow:0 0 15px white;
+        }
+
+        .badge-featured{
+            position:absolute;
+            top:15px;
+            right:15px;
+            background:white;
+            color:black;
+            font-weight:bold;
+            padding:8px 12px;
+        }
+
+        .feature-box{
+            background:#111;
+            padding:30px;
+            border-radius:10px;
+            text-align:center;
+            transition:.3s;
+        }
+
+        .feature-box:hover{
+            transform:translateY(-8px);
+        }
+
+        .hero-section{
+            background:url("Brand Pictures/product1.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            min-height: 70vh;
+        }
+
+        @media (max-width: 768px){
+
+            .hero-section{
+                background-image: url("Brand Pictures/mobile product.jpg");
+                background-position: right;
+            }
+
+        }
+
+        .footer-luxury{
+            background:#000;
+            padding:70px 20px 40px;
+            margin-top:80px;
+            border-top:1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo{
+            font-size:3rem;
+            font-weight:700;
+            letter-spacing:8px;
+            margin-bottom:15px;
+        }
+
+        .footer-slogan{
+            color:#aaa;
+            font-size:1rem;
+            letter-spacing:2px;
+            margin-bottom:35px;
+        }
+
+        .footer-links{
+            margin-bottom:35px;
+        }
+
+        .footer-links a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-size:.95rem;
+            letter-spacing:2px;
+            transition:.3s;
+            position:relative;
+        }
+
+        .footer-links a:hover{
+            color:#ccc;
+        }
+
+        .footer-links a::after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:2px;
+            left:0;
+            bottom:-5px;
+            background:white;
+            transition:.3s;
+        }
+
+        .footer-links a:hover::after{
+            width:100%;
+        }
+
+        .footer-divider{
+            width:120px;
+            height:1px;
+            background:rgba(255,255,255,.3);
+            margin:0 auto 30px;
+        }
+
+        .footer-copy{
+            color:#777;
+            font-size:.9rem;
+        }
+
+        @media (max-width:768px){
+
+            .footer-logo{
+                font-size:2rem;
+                letter-spacing:4px;
+            }
+
+            .footer-links a{
+                display:block;
+                margin:12px 0;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="home.html">
+                TEN TEN
+            </a>
+
+            <button class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="price.html">
+                            Price
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <section class="page-header hero-section">
+
+        <div class="container">
+
+            <h1 class="display-4 fw-bold">
+                Our Products
+            </h1>
+
+            <p class="lead">
+                Premium lotion for whitening and smooth skin.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section class="container py-5">
+
+        <div class="row">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <img src="Brand Pictures/spa.jpg"
+                         class="card-img-top"
+                         alt="Body Spa">
+
+                    <div class="card-body text-center">
+
+                        <h3>Body Spa</h3>
+
+                        <p>
+                            Reduce old cell. Help boosting whitening
+                            (extra solution for applying lotion to get
+                            quick result).
+                        </p>
+
+                        <div class="price">
+                            $5.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <div class="badge-featured">
+                        BEST SELLER
+                    </div>
+
+                    <img src="Brand Pictures/extra.jpg"
+                         class="card-img-top"
+                         alt="TN Gluta Extra">
+
+                    <div class="card-body text-center">
+
+                        <h3>TN Gluta Extra</h3>
+
+                        <p>
+                            Help boost whitening skin for all skin types.
+                            Best recommendation for dark skin and helps
+                            improve skin tone.
+                        </p>
+
+                        <div class="price">
+                            $26.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <div class="badge-featured">
+                        BEST SELLER
+                    </div>
+
+                    <img src="Brand Pictures/3in1.jpg"
+                         class="card-img-top"
+                         alt="TEN 3in1">
+
+                    <div class="card-body text-center">
+
+                        <h3>TEN 3in1</h3>
+
+                        <p>
+                            Best for mixing with TN Gluta Extra,
+                            providing extra whitening support.
+                        </p>
+
+                        <div class="price">
+                            $8.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- PRODUCT 4 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <div class="badge-featured">
+                        BEST SELLER
+                    </div>
+
+                    <img src="Brand Pictures/serum.jpg"
+                         class="card-img-top"
+                         alt="TN Vitamin">
+
+                    <div class="card-body text-center">
+
+                        <h3>TN Vitamin</h3>
+
+                        <p>
+                            Best for mixing with TN Gluta Extra,
+                            TN x2, and TEN 3in1 for additional
+                            whitening support.
+                        </p>
+
+                        <div class="price">
+                            $11.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 5 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <div class="badge-featured">
+                        BEST SELLER
+                    </div>
+
+                    <img src="Brand Pictures/scrub.jpg"
+                         class="card-img-top"
+                         alt="Body Scrub">
+
+                    <div class="card-body text-center">
+
+                        <h3>Body Scrub</h3>
+
+                        <p>
+                            Removes old skin cells, supports brighter
+                            skin, and helps reduce scars.
+                        </p>
+
+                        <div class="price">
+                            $5.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 6 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <div class="badge-featured">
+                        NEW
+                    </div>
+
+                    <img src="Brand Pictures/body oil1.jpg"
+                         class="card-img-top"
+                         alt="Body Oil">
+
+                    <div class="card-body text-center">
+
+                        <h3>Body Oil</h3>
+
+                        <p>
+                            Best for mixing with TN lotion,
+                            providing extra whitening support
+                            and helping reduce scars.
+                        </p>
+
+                        <div class="price">
+                            $9.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!-- PRODUCT 7 -->
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="card product-card h-100">
+
+                    <img src="Brand Pictures/x2.png"
+                         class="card-img-top"
+                         alt="TN Gluta x2">
+
+                    <div class="card-body text-center">
+
+                        <h3>TN Gluta x2</h3>
+
+                        <p>
+                            Best for people with scars and can
+                            be mixed with whitening lotion.
+                        </p>
+
+                        <div class="price">
+                            $12.99
+                        </div>
+
+                        <br>
+
+                        <button class="btn btn-custom">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHY OUR PRODUCTS -->
+
+    <section class="container py-5">
+
+        <h2 class="text-center mb-5">
+            Why Customers Love TEN TEN Products
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+
+                <div class="feature-box">
+
+                    <h4>Best Solution</h4>
+
+                    <p>
+                        Helping customers achieve smoother,
+                        brighter, and glowing skin.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="feature-box">
+
+                    <h4>CEO Friendly and Teamwork</h4>
+
+                    <p>
+                        Friendly recommendations, real experiences,
+                        and polite customer service.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="feature-box">
+
+                    <h4>Provide Job Opportunities</h4>
+
+                    <p>
+                        Customers can also gain experience
+                        as product promoters and earn income.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer-luxury text-center">
+
+    <div class="container">
+
+        <h1 class="footer-logo">
+            TEN TEN
+        </h1>
+
+        <p class="footer-slogan">
+            Premium Whitening Body Lotion
+        </p>
+
+        <div class="footer-links">
+
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="price.html">PRICE</a>
+            <a href="contact.html">CONTACT</a>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-slogan">
+            Glow Naturally. Feel Confident.
+        </p>
+
+        <p class="footer-copy">
+            &copy; 2026 TEN TEN Official | Developed by KHUN SOTHOMMO
+        </p>
+
+    </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
