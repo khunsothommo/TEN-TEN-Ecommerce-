@@ -74,13 +74,51 @@
         }
 
         .card{
-            background:#111;
+            background:rgba(255,255,255,0.1);
             color:white;
             transition:.4s;
+            min-height: 500px;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .card-mission{
+            background:rgba(255,255,255,0.1);
+            color:white;
+            transition:.4s;
+            min-height: 350px;
+            display:flex;
+            flex-direction:column;
         }
 
         .card:hover{
             transform:translateY(-10px);
+        }
+
+        .card-mission:hover{
+            transform:translateY(-10px);
+        }
+
+        .card-body{
+            background: rgba(255,255,255,0.1);
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+
+        .card-img-top{
+            width:100%;
+            height: 500px;
+            object-fit:cover;
+        }
+
+        @media (max-width:768px){
+
+            .card-img-top{
+                height:500px;
+            }
+
         }
 
         .hero-section{
@@ -104,9 +142,8 @@
         }
         
         .footer-luxury{
-            background:#000;
+            background:rgba(255,255,255,0.1);
             padding:70px 20px 40px;
-            margin-top:80px;
             border-top:1px solid rgba(255,255,255,0.1);
         }
 
@@ -157,13 +194,6 @@
             width:100%;
         }
 
-        .footer-divider{
-            width:120px;
-            height:1px;
-            background:rgba(255,255,255,.3);
-            margin:0 auto 30px;
-        }
-
         .footer-copy{
             color:#777;
             font-size:.9rem;
@@ -191,7 +221,7 @@
         <div class="container">
 
             <a class="navbar-brand fw-bold" href="home.html">
-                TEN TEN
+                TEN TEN Official
             </a>
 
             <button class="navbar-toggler"
@@ -269,12 +299,12 @@
         <div class="row">
 
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card-mission">
                     <div class="card-body text-center">
 
                         <h4>Set of Product</h4>
 
-                        <p>
+                        <p class="px-4">
                             Customer should have a set of products
                             recommended by the CEO to achieve
                             quicker results.
@@ -285,12 +315,12 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card-mission">
                     <div class="card-body text-center">
 
                         <h4>Posting</h4>
 
-                        <p>
+                        <p class="px-4">
                             Customers can create daily video reviews
                             using the product set and post them on
                             platforms such as TikTok and Facebook.
@@ -303,12 +333,12 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card-mission">
                     <div class="card-body text-center">
 
                         <h4>Sharing Group</h4>
 
-                        <p>
+                        <p class="px-4">
                             Customers should share new video posts
                             from the teamwork or the CEO's official
                             account page.
@@ -330,60 +360,46 @@
 
         <div class="row">
 
-            <div class="col-md-4 mb-4">
-                <div class="card">
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card w-100">
 
                     <img src="Brand Pictures/p.jpg"
-                         class="card-img-top"
-                         alt="Classic Lotion">
+                        class="card-img-top"
+                        alt="Customer">
 
-                    <div class="card-body">
-
-                        <h4>Classic Lotion</h4>
-
-                        <p>
-                            Daily skin protection and hydration.
-                        </p>
-
+                    <div class="card-body text-center">
+                        <h4>Raa</h4>
                     </div>
 
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
-                <div class="card">
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card w-100">
 
                     <img src="Brand Pictures/p1.jpg"
                          class="card-img-top"
                          alt="Brightening Lotion">
 
-                    <div class="card-body">
+                    <div class="card-body text-center">
 
-                        <h4>Brightening Lotion</h4>
-
-                        <p>
-                            For brighter and healthier skin.
-                        </p>
+                        <h4>Mak Ny</h4>
 
                     </div>
 
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
-                <div class="card">
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card w-100">
 
                     <img src="Brand Pictures/p2.jpg"
                          class="card-img-top"
                          alt="Premium Gold Lotion">
 
-                    <div class="card-body">
+                    <div class="card-body text-center">
 
-                        <h4>Premium Gold Lotion</h4>
-
-                        <p>
-                            Luxury skincare experience.
-                        </p>
+                        <h4>TongXie</h4>
 
                     </div>
 
@@ -414,8 +430,6 @@
             <a href="contact.html">CONTACT</a>
 
         </div>
-
-        <div class="footer-divider"></div>
 
         <p class="footer-slogan">
             Glow Naturally. Feel Confident.
